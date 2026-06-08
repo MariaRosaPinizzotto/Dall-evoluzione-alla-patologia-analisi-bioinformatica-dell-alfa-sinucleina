@@ -1,0 +1,2 @@
+# Dall-evoluzione-alla-patologia-analisi-bioinformatica-dell-alfa-sinucleina
+Analisi bioinformatica dell'alfa-sinucleina (SNCA) attraverso il confronto tra specie diverse e lo studio di mutazioni associate alla malattia di Parkinson. Il progetto mira a evidenziare la conservazione evolutiva della proteina e a valutare il possibile impatto biologico delle varianti patologiche sull'aggregazione proteica.
