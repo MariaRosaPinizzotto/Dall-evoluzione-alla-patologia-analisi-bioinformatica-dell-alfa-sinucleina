@@ -25,7 +25,7 @@ while ~feof(fid)
 end
 fclose(fid);
 
-% Mostriamo i dati letti
+% Stampare a video i dati letti
 fprintf('Proteina caricata con successo!\n');
 fprintf('Intestazione: %s\n', header);
 fprintf('Numero di amminoacidi: %d\n', length(sequenza));
@@ -33,23 +33,22 @@ fprintf('Numero di amminoacidi: %d\n', length(sequenza));
 %% Passo 2: Analisi della composizione amminoacidica
 fprintf('\n--- Analisi della Composizione ---\n');
 
-% Prendiamo la sequenza letta al Passo 1
-% Troviamo tutti gli amminoacidi unici presenti e ordiniamoli
+% Trovare tutti gli amminoacidi unici presenti e ordinarli
 amino_acids = unique(sequenza);
 conteggi = zeros(length(amino_acids), 1);
 
-% Contiamo quanti ce ne sono per ogni tipo
+% Numerazione di amminoaicidi per tipo
 for i = 1:length(amino_acids)
     conteggi(i) = sum(sequenza == amino_acids(i));
 end
 
-% Mostriamo i risultati nella Command Window
+% Stampare a video i risultati nella Command Window
 disp('Amminoacido -> Quantità:');
 for i = 1:length(amino_acids)
     fprintf('   %s -> %d\n', amino_acids(i), conteggi(i));
 end
 
-% Creiamo il grafico a barre per visualizzare il risultato
+% Creazione il grafico a barre per visualizzare il risultato
 figure('Name', 'Composizione Amminoacidica Alfa-Sinucleina');
 bar(conteggi, 'FaceColor', [0 0.4470 0.7410]);
 set(gca, 'XTick', 1:length(amino_acids), 'XTickLabel', cellstr(amino_acids'));
@@ -58,7 +57,7 @@ xlabel('Amminoacidi (Codice a una lettera)');
 ylabel('Numero di occorrenze');
 grid on;
 
-% Salviamo automaticamente il grafico nella cartella 'figures'
+% Salvataggio automatico del grafico nella cartella 'figures'
 saveas(gcf, fullfile('..', 'figures', 'composizione_amminoacidica.png'));
 fprintf('\nGrafico salvato correttamente nella cartella "figures"!\n');
 
