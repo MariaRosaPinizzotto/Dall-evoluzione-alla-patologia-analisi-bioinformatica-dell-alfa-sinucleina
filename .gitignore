@@ -1,0 +1,16 @@
+*.asv
+*.autosave
+*.fig
+*.mlx~
+*.slxc
+*.slx.r*
+*.m~
+*.mex*
+*.p
+*.log
+codegen/
+slprj/
+work/
+*.mat
+.DS_Store
+Thumbs.db
